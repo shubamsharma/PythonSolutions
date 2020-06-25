@@ -118,7 +118,7 @@ rf_random.fit(x_train_split, y_train_split)
 
 rf_random.best_params_
 
-base_model = RandomForestClassifier(n_estimators=500, n_jobs=-1, random_state=42)
+best_random = rf_random.best_estimator_
 base_model.fit(x_train_split, y_train_split)
 rf_bow_predictions = base_model.predict(x_test_split)
 
