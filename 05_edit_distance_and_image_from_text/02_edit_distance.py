@@ -1,4 +1,4 @@
-def editDistDP(str1, str2): 
+def editDistMat(str1, str2): 
     m = len(str1)
     n = len(str2)
     mat = [[0 for x in range(n + 1)] for x in range(m + 1)] 
@@ -25,7 +25,7 @@ for stringComp in stringArray :
     tempstringComp = [x for x in stringArray if stringComp != x]
     stringMinDistCount = {}
     for stringToBeComp in tempstringComp : 
-        edit_distance = editDistDP(stringComp, stringToBeComp)
+        edit_distance = editDistMat(stringComp, stringToBeComp)
         if edit_distance <= THRESHOLD : 
             stringMinDistCount[stringToBeComp] = edit_distance
     if stringMinDistCount :
